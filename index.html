@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SyncTur</title>
+    <link rel="stylesheet" type="text/css" href="src/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <h3>SyncTur</h3>
+    </header>
+    <main>
+      <div class="title">
+        <h1>Cadastrar Pacotes</h1>
+      </div>
+      <div class="bg_container">
+        <div class="container_dados">
+          <h3>Pacote</h3>
+          <input
+            class="pacote"
+            name="pacote"
+            type="text"
+            placeholder="Digite nome completo"
+          />
+          <div class="bg_status_date">
+            <div class="status">
+              <h3>Status do Pacote</h3>
+              <input type="checkbox" name="ativo" id="ativo" value="ativo" />
+              <label for="ativo">Ativo</label>
+              <input
+                type="checkbox"
+                name="inativo"
+                id="inativo"
+                value="inativo"
+              />
+              <label for="inativo">Inativo</label>
+            </div>
+            <div class="date">
+              <h3>Data da Viagem</h3>
+              <input
+                placeholder="Date"
+                class="textbox-n"
+                type="text"
+                onfocus="(this.type='date')"
+                onblur="(this.type='text')"
+                id="date"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="descricao">
+          <h3>Descrição</h3>
+          <textarea
+            name="descricao"
+            placeholder="Descrição do pacote"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+      </div>
+      <div class="bg_btn_cadastrar">
+        <button class="btn_cadastrar">Cadastrar</button>
+      </div>
+      <div class="desc"></div>
+    </main>
+    <footer></footer>
+    <script src="src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+/***  FONTS ***/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+/***  VARIABLES & THEMES ***/
+:root {
+  --primary-color: #f6511d;
+  --second-color: #8458ff;
+  --tertiary-color: #ffc107;
+  --quaternary-color: #dc3545;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 56px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+.container_dados {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+.descricao {
+  display: flex;
+  flex-direction: column;
+  justify-items: end;
+  gap: 20px;
+}
+textarea {
+  width: 555px;
+  height: 161px;
+  resize: none;
+  border: solid 1px #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.bg_container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+h3 {
+  color: #152536;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+}
+
+.bg_btn_cadastrar {
+  display: flex;
+  justify-content: center;
+}
+
+.btn_cadastrar {
+  background-color: var(--second-color);
+  color: #ffffff;
+  font-size: 16px;
+  width: 109px;
+  height: 39px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  margin-top: 56px;
+}
+.pacote {
+  width: 589px;
+  height: 38px;
+  border-radius: 4px;
+  border: solid 1px #ced4da;
+  padding-left: 10px;
+}
+.bg_status_date {
+  display: flex;
+  gap: 100px;
+}
+.date input {
+  width: 293px;
+  height: 38px;
+  margin-top: 30px;
+  color: #ced4da;
+  border: solid 1px #ced4da;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+.status label,
+.status input {
+  width: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.status label {
+  margin-top: -12px;
+}
+.status input {
+  margin-top: 9px;
+  margin-left: 10px;
+}
