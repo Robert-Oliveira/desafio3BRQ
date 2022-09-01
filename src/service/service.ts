@@ -9,22 +9,20 @@ export class PacoteService {
       .then((res) => res.json()) //recebeu os dados e converte para json
       .then((dados: DadosDoPacote[]) => {
         //Array<any>)=>{funciona mas nao garante o nome da variaveis dados pela interface
-        console.log(dados);
 
         return dados.map((dadoPacote) => {
           //pega os dados de hoje e converte um novo array do tipo negociacao
           return new Pacote(
-            dadoPacote.id,
             dadoPacote.nome,
-            dadoPacote.descricao,
+            dadoPacote.status,
             dadoPacote.data,
-            dadoPacote.status
+            dadoPacote.descricao,
+            dadoPacote.id
           );
         });
       });
   }
 }
-window.onload = () => PacoteService;
 // const fetchSyncTur = () => {
 //   const promises: Array<any> = [];
 //   const url = "https://62361b7feb166c26eb2f488a.mockapi.io/pacotes";

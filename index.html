@@ -19,7 +19,7 @@
         <div class="container_dados">
           <h3>Pacote</h3>
           <input
-            class="pacote"
+            class="input-nome-pacote"
             name="pacote"
             type="text"
             placeholder="Digite nome completo"
@@ -27,11 +27,11 @@
           <div class="bg_status_date">
             <div class="status">
               <h3>Status do Pacote</h3>
-              <input type="checkbox" name="ativo" id="ativo" value="ativo" />
+              <input type="checkbox" name="status" id="ativo" value="ativo" />
               <label for="ativo">Ativo</label>
               <input
                 type="checkbox"
-                name="inativo"
+                name="status"
                 id="inativo"
                 value="inativo"
               />
@@ -53,6 +53,7 @@
         <div class="descricao">
           <h3>Descrição</h3>
           <textarea
+            class="pacote-descricao"
             name="descricao"
             placeholder="Descrição do pacote"
             id=""
@@ -65,8 +66,9 @@
         <button class="btn_cadastrar">Cadastrar</button>
       </div>
       <div class="desc"></div>
+      <p class="lista" id="lista"></p>
     </main>
     <footer></footer>
-    <script src="src/app.js"></script>
+    <script type="module" src="src/app.js"></script>
   </body>
 </html>

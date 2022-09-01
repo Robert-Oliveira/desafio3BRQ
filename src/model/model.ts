@@ -1,25 +1,16 @@
 export class Pacote {
-  private id: string;
   private nome: string;
-  private descricao: string;
+  private status: string;
   private data: string;
-  private status: boolean;
+  private descricao: string;
+  private id: string;
 
-  private pacotes: Pacote[] = [];
-
-  adiciona(pacote: Pacote) {
-    this.pacotes.push(pacote);
-  }
-
-  lista(): ReadonlyArray<Pacote> {
-    return [...this.pacotes];
-  }
   constructor(
-    _id: string,
     _nome: string,
-    _descricao: string,
+    _status: string,
     _data: string,
-    _status: boolean
+    _descricao: string,
+    _id: string
   ) {
     this.id = _id;
     this.nome = _nome;
@@ -52,10 +43,42 @@ export class Pacote {
   public set Data(value: string) {
     this.data = value;
   }
-  public get Status(): boolean {
+  public get Status(): string {
     return this.status;
   }
-  public set Status(value: boolean) {
+  public set Status(value: string) {
     this.status = value;
+  }
+
+  public static criaDados(
+    nomeString: string,
+    statusString: string,
+    dataString: string,
+    descricaoString: string,
+    idString: string
+  ): Pacote {
+    const nomePacote = nomeString;
+    const statusPacote = statusString;
+    const exp = "-";
+    const dataPacote = dataString;
+    new Date(dataString.replace(exp, "/"));
+    const textArea = descricaoString;
+
+    const idPacote = idString;
+    return new Pacote(nomePacote, statusPacote, dataPacote, textArea, idPacote);
+  }
+
+  public dataTexto(data: string): string {
+    let newDate = new Date(data);
+    console.log(newDate);
+
+    let dataString: string;
+    dataString =
+      newDate.getDate().toString() +
+      "/" +
+      newDate.getMonth().toString() +
+      "/" +
+      newDate.getFullYear().toString();
+    return dataString;
   }
 }

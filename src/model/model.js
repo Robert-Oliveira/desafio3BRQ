@@ -1,17 +1,10 @@
 export class Pacote {
-    constructor(_id, _nome, _descricao, _data, _status) {
-        this.pacotes = [];
+    constructor(_nome, _status, _data, _descricao, _id) {
         this.id = _id;
         this.nome = _nome;
         this.descricao = _descricao;
         this.data = _data;
         this.status = _status;
-    }
-    adiciona(pacote) {
-        this.pacotes.push(pacote);
-    }
-    lista() {
-        return [...this.pacotes];
     }
     get Id() {
         return this.id;
@@ -42,5 +35,27 @@ export class Pacote {
     }
     set Status(value) {
         this.status = value;
+    }
+    static criaDados(nomeString, statusString, dataString, descricaoString, idString) {
+        const nomePacote = nomeString;
+        const statusPacote = statusString;
+        const exp = "-";
+        const dataPacote = dataString;
+        new Date(dataString.replace(exp, "/"));
+        const textArea = descricaoString;
+        const idPacote = idString;
+        return new Pacote(nomePacote, statusPacote, dataPacote, textArea, idPacote);
+    }
+    dataTexto(data) {
+        let newDate = new Date(data);
+        console.log(newDate);
+        let dataString;
+        dataString =
+            newDate.getDate().toString() +
+                "/" +
+                newDate.getMonth().toString() +
+                "/" +
+                newDate.getFullYear().toString();
+        return dataString;
     }
 }

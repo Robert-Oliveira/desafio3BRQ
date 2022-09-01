@@ -3,5 +3,5 @@ export interface DadosDoPacote {
   nome: string;
   descricao: string;
   data: string;
-  status: boolean;
+  status: string;
 }
