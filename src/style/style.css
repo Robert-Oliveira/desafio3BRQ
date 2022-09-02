@@ -1,5 +1,6 @@
 /***  FONTS ***/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 /***  VARIABLES & THEMES ***/
 :root {
   --primary-color: #f6511d;
@@ -150,4 +151,33 @@ h3 {
   color: #ffffff;
   border: none;
   border-radius: 4px;
+}
+#btn_alterar {
+  display: none;
+}
+footer {
+  width: 100%;
+  background-color: #f6511d;
+  height: 250px;
+  color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.vertical {
+  border-left: 2px solid white;
+  height: 200px;
+}
+.p_footer {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #fffcfc;
+}
+
+.text_footer {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
 }

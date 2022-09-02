@@ -70,7 +70,6 @@ export class Pacote {
 
   public dataTexto(data: string): string {
     let newDate = new Date(data);
-    console.log(newDate);
 
     let dataString: string;
     dataString =

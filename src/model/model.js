@@ -48,7 +48,6 @@ export class Pacote {
     }
     dataTexto(data) {
         let newDate = new Date(data);
-        console.log(newDate);
         let dataString;
         dataString =
             newDate.getDate().toString() +
