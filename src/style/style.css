@@ -11,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
 header {
@@ -49,6 +50,10 @@ textarea {
   border-radius: 4px;
   font-size: 16px;
   font-family: "Inter", sans-serif;
+  padding: 15px;
+}
+textarea:focus {
+  outline-color: var(--second-color);
 }
 
 .bg_container {
@@ -87,6 +92,9 @@ h3 {
   border: solid 1px #ced4da;
   padding-left: 10px;
 }
+.input-nome-pacote:focus {
+  outline-color: var(--second-color);
+}
 .bg_status_date {
   display: flex;
   gap: 100px;
@@ -99,6 +107,17 @@ h3 {
   border: solid 1px #ced4da;
   padding-left: 10px;
   border-radius: 4px;
+}
+#date {
+  outline-color: var(--second-color);
+}
+
+.p_data {
+  color: #000000;
+  font-weight: bolder;
+}
+.p_descricao {
+  color: #6c757d;
 }
 .status label,
 .status input {
@@ -180,4 +199,46 @@ footer {
   font-size: 40px;
   font-weight: bold;
   font-family: "Inter", sans-serif;
+}
+
+/**STYLE RADIO**/
+.group-radio {
+  display: block;
+  padding: 10px;
+  margin-top: 5px;
+  position: relative;
+  margin-left: -10px;
+}
+
+.group-radio input[type="radio"] {
+  display: none;
+}
+
+.group-radio input[type="radio"]:checked + label::before {
+  color: #ffffff;
+  content: "✓";
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  background-color: var(--second-color);
+}
+
+.group-radio input[type="radio"]:checked ~ .group-radio-message {
+  opacity: 1;
+}
+
+.group-radio label,
+.group-radio label::before {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.group-radio label::before {
+  border-radius: 5px;
+  border: 1px solid #abb5be;
+  content: "";
+  height: 20px;
+  width: 20px;
 }

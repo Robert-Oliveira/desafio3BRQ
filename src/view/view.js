@@ -10,8 +10,8 @@ export class PacotesView {
             return `
           <div class="list-card">
               <h2>${pacote.Nome}</h2>
-              <p>${pacote.Descricao}</p>
-              <p>Data da viagem: ${pacote.dataTexto(pacote.Data)}
+              <p class="p_descricao">${pacote.Descricao}</p>
+              <p class="p_data">Data da viagem: ${pacote.dataTexto(pacote.Data)}
               <div class="list-btn">
                   <button class="editar" id="editar${pacote.Id}" value="${pacote.Id}">Editar</button>
                   <button class="excluir" id="excluir${pacote.Id}" value="${pacote.Id}">Excluir</button>

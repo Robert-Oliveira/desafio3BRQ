@@ -27,15 +27,26 @@
           <div class="bg_status_date">
             <div class="status">
               <h3>Status do Pacote</h3>
-              <input type="checkbox" name="status" id="ativo" value="ativo" />
-              <label for="ativo">Ativo</label>
-              <input
-                type="checkbox"
-                name="status"
-                id="inativo"
-                value="inativo"
-              />
-              <label for="inativo">Inativo</label>
+              <div class="group-radio">
+                <input
+                  class="group-radio"
+                  type="radio"
+                  name="status"
+                  id="ativo"
+                  value="ativo"
+                />
+                <label for="ativo">Ativo</label>
+              </div>
+              <div class="group-radio">
+                <input
+                  class="group-radio"
+                  type="radio"
+                  name="status"
+                  id="inativo"
+                  value="inativo"
+                />
+                <label for="inativo">Inativo</label>
+              </div>
             </div>
             <div class="date">
               <h3>Data da Viagem</h3>
@@ -64,7 +75,7 @@
       </div>
       <div class="bg_btn_cadastrar">
         <button class="btn_cadastrar" id="btn_cadastrar">Cadastrar</button>
-        <button class="btn_cadastrar" id="btn_alterar">Editar</button>
+        <button class="btn_cadastrar" id="btn_alterar">Salvar</button>
       </div>
       <div class="desc"></div>
       <p class="lista" id="lista"></p>
