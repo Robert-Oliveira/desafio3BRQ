@@ -183,6 +183,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 50px;
+  margin-top: 48px;
 }
 .vertical {
   border-left: 2px solid white;
