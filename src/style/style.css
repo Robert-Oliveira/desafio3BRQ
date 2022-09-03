@@ -67,6 +67,7 @@ h3 {
   color: #152536;
   font-family: "Inter", sans-serif;
   font-size: 24px;
+  font-weight: bolder;
 }
 
 .bg_btn_cadastrar {
@@ -98,6 +99,7 @@ h3 {
 .bg_status_date {
   display: flex;
   gap: 100px;
+  padding-top: 32px;
 }
 .date input {
   width: 293px;

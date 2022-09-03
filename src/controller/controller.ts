@@ -39,7 +39,7 @@ export class PacoteController {
     ) as HTMLButtonElement;
   }
 
-  // cadastra novos pacotes
+  // funcao para cadastras novos pacotes
   public adicionar(): void {
     const cadastrar = Pacote.criaDados(
       this.inputNome.value,
@@ -55,7 +55,7 @@ export class PacoteController {
   }
 
   //Funcao editar pacote
-  editar(etapa: number, seletor: string) {
+  public editar(etapa: number, seletor: string) {
     //pegar os dados e colocar na tela
     if (etapa == 1 && seletor) {
       const cadastrados = this.cadastrados.selecionar(seletor);
@@ -77,18 +77,20 @@ export class PacoteController {
     this.pacotesView.update(this.cadastrados);
   }
 
-  // Excluir itens
-  selecionar(seletor: string): Pacote {
+  public selecionar(seletor: string): Pacote {
     const cadastrados = this.cadastrados.selecionar(seletor);
     return cadastrados;
   }
+  // funcao para excluir pacote
 
-  excluir(seletor: string) {
+  public excluir(seletor: string) {
     this.cadastrados.excluir(seletor);
 
     AtualizarEventListenerCards(1000);
     this.pacotesView.update(this.cadastrados);
   }
+
+  // funcao para criar a lista
   public importarDados() {
     this.pacoteService
       .obterPacotes() //retora uma lista de negociacao
@@ -100,7 +102,7 @@ export class PacoteController {
         this.pacotesView.update(this.cadastrados);
       });
   }
-
+  // pega o valor do botao radio
   private valorSelect(status: any): string {
     status = this.inputStatus;
     for (let i = 0; i < status.length; i++) {
@@ -111,6 +113,7 @@ export class PacoteController {
     return status;
   }
 
+  // funcao para limpar o formulario depois de cadastrar ou editar um pacote
   private limparFormulario(): void {
     this.inputNome.value = "";
     this.inputStatus.value = "";
@@ -118,7 +121,7 @@ export class PacoteController {
     this.textAreaDescricao.value = "";
     this.inputNome.focus();
   }
-
+  // tratar a data
   protected dataTexto(data: string): string {
     let dataDate = new Date(data);
     let dataString: string;
@@ -126,7 +129,7 @@ export class PacoteController {
     let mes =
       dataDate.getMonth() < 10
         ? "0" + dataDate.getMonth().toString()
-        : dataDate.getMonth().toString(); //tratamento do texto mes <q 10
+        : dataDate.getMonth().toString();
 
     dataString =
       dataDate.getFullYear().toString() +

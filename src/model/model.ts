@@ -1,3 +1,4 @@
+// classe model para construir os objetos e os methodos get e set para trabalhar os atributos do objeto
 export class Pacote {
   private nome: string;
   private status: string;
@@ -49,7 +50,7 @@ export class Pacote {
   public set Status(value: string) {
     this.status = value;
   }
-
+  // função que chama o construtor
   public static criaDados(
     nomeString: string,
     statusString: string,
@@ -73,9 +74,9 @@ export class Pacote {
 
     let dataString: string;
     dataString =
-      newDate.getDate().toString() +
+      newDate.getDate().toString().padStart(2, "0") +
       "/" +
-      newDate.getMonth().toString() +
+      (newDate.getMonth() + 1).toString().padStart(2, "0") +
       "/" +
       newDate.getFullYear().toString();
     return dataString;

@@ -4,15 +4,17 @@ import { PacoteController } from "./controller/controller.js";
 const pacoteService = new PacoteService();
 const pacoteController = new PacoteController();
 
+// chama a lista e atualiza a pagina quando ela é aberta
 window.onload = () => {
   pacoteController.importarDados();
   AtualizarEventListenerCards(1000);
 };
+// botão cadastrar com a função de adicionar
 let btn_cadastrar = document.querySelector(".btn_cadastrar") as HTMLElement;
 btn_cadastrar.addEventListener("click", (event) => {
   pacoteController.adicionar();
 });
-
+// botão para salvar as alterações e trocar os botões
 let btn_alterar = document.querySelector("#btn_alterar") as HTMLElement;
 btn_alterar.addEventListener("click", (event) => {
   btn_cadastrar.style.display = "block";
@@ -20,6 +22,7 @@ btn_alterar.addEventListener("click", (event) => {
   pacoteController.adicionar();
 });
 
+// função que incluir o evento listener dentro dos botões editar e excluir depois que eles forem criados
 export function AtualizarEventListenerCards(miliseconds: number) {
   setTimeout(() => {
     let tamanho = document.querySelectorAll(".excluir");

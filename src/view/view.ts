@@ -6,6 +6,7 @@ export class PacotesView {
     const elemento = document.querySelector(seletor);
     this.elemento = elemento as HTMLElement;
   }
+  // printa a lista no html
   protected template(model: Cadastrados): string {
     return model
       .lista()
@@ -28,7 +29,7 @@ export class PacotesView {
       })
       .join();
   }
-
+  // atualiza a pagina depois que uma modificação é feita
   update(model: Cadastrados) {
     this.elemento.innerHTML = this.template(model);
   }

@@ -50,9 +50,9 @@ export class Pacote {
         let newDate = new Date(data);
         let dataString;
         dataString =
-            newDate.getDate().toString() +
+            newDate.getDate().toString().padStart(2, "0") +
                 "/" +
-                newDate.getMonth().toString() +
+                (newDate.getMonth() + 1).toString().padStart(2, "0") +
                 "/" +
                 newDate.getFullYear().toString();
         return dataString;
